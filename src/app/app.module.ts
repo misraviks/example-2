@@ -8,6 +8,8 @@ import { EvenComponent } from './even/even.component';
 import { BasicHighLightDirective } from './basic-highlight/basic-highlight.directive';
 import { BetterdirectiveDirective } from './better-directive/betterdirective.directive';
 import { UnlessDirective } from './unless-directive/unless.directive';
+import { AccountComponent } from './account/account.component';
+import { NewAccountComponent } from './new-account/new-account.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { UnlessDirective } from './unless-directive/unless.directive';
     EvenComponent,
     BasicHighLightDirective,
     BetterdirectiveDirective,
-    UnlessDirective
+    UnlessDirective,
+    AccountComponent,
+    NewAccountComponent
   ],
   imports: [
     BrowserModule

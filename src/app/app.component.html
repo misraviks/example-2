@@ -1,5 +1,5 @@
 <div class="container" >
-  <div *ngIf="false" >
+  <!-- <div *ngIf="false" >
   <div class="row" >
     <div class="col-xs-12">
       <h3>Bind it!</h3>
@@ -37,7 +37,7 @@
   </div>
   </div>
 
-  <div class="row">
+  <div class="row" *ngIf="false">
       <div class="col-xs-12">
         <button
           class="btn btn-primary"
@@ -64,13 +64,27 @@
        
       </div>
   </div>
-  <p appBasicHighlight>Basic Highlight</p>
-  <p appBetterdirective [highlightColor]="'red'" defaultColor="white">Better Highlight</p>
-  <div [ngSwitch]="value">
-  <p *ngSwitchCase="5">Value is 5 </p>
-  <p *ngSwitchCase="10">Value is 10 </p>
-  <p *ngSwitchCase="15">Value is 15 </p>
-  <p *ngSwitchDefault>Default value </p>
+  <div *ngIf="false">
+    <p appBasicHighlight>Basic Highlight</p>
+    <p appBetterdirective [highlightColor]="'red'" defaultColor="white">Better Highlight</p>
+    <div [ngSwitch]="value">
+    <p *ngSwitchCase="5">Value is 5 </p>
+    <p *ngSwitchCase="10">Value is 10 </p>
+    <p *ngSwitchCase="15">Value is 15 </p>
+    <p *ngSwitchDefault>Default value </p>
+    </div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-new-account (accountAdded)="onAccountAdded($event)"></app-new-account>
+      <hr>
+      <app-account
+        *ngFor="let acc of accounts; let i = index"
+        [account]="acc"
+        [id]="i"
+        (statusChanged)="onStatusChanged($event)"></app-account>
+    </div>
   </div>
-  
+
 </div>
