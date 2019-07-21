@@ -12,12 +12,34 @@ export class AppComponent {
   count:number=0;
   myVar;
   current=0;
+  numbers = [1, 2, 3, 4, 5];
+  onlyOdd = false;
+  oddNumbers=[1,3,5];
+  evenNumbers=[2,4];
+  value=1;
+
   /**
    *
    */
   constructor() {
     this.count=1;
   }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
   numberType(num:number)
   {
     if(num%2==0) return'Even';
@@ -40,10 +62,6 @@ export class AppComponent {
 
   
   }
-  
-
-
-
   GameStopped()
   {
     console.log('Stopped');

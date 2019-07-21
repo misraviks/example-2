@@ -5,6 +5,9 @@ import { AppComponent } from './app.component';
 import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
+import { BasicHighLightDirective } from './basic-highlight/basic-highlight.directive';
+import { BetterdirectiveDirective } from './better-directive/betterdirective.directive';
+import { UnlessDirective } from './unless-directive/unless.directive';
 
 
 @NgModule({
@@ -12,7 +15,10 @@ import { EvenComponent } from './even/even.component';
     AppComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    BasicHighLightDirective,
+    BetterdirectiveDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule
