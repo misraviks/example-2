@@ -15,6 +15,8 @@ import { LoggingService } from './logging.service';
 import { DropDownDirective } from './dropdown.directive';
 import { ActiveUsersComponent } from './active-users/active-users.component';
 import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { UsersService } from './user.service';
+import { CountUserActivity } from './statusCount.service';
 
 
 @NgModule({
@@ -35,7 +37,7 @@ import { InactiveUsersComponent } from './inactive-users/inactive-users.componen
   imports: [
     BrowserModule
   ],
-  providers: [AccountsService,LoggingService],
+  providers: [AccountsService,LoggingService,UsersService,CountUserActivity],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

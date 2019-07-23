@@ -2,6 +2,7 @@ import { Component, Renderer2, Inject, OnInit } from '@angular/core';
 import { createWiresService } from 'selenium-webdriver/firefox';
 import { DOCUMENT } from '@angular/platform-browser';
 import { AccountsService } from './accountService.service';
+import { UsersService } from './user.service';
 
 @Component({
   selector: 'app-root',
@@ -16,10 +17,14 @@ export class AppComponent implements OnInit {
     'journal','lumen','paper','readable','sandstone',
     'simplex','slate','spacelab','superhero','united','yeti'
   ];
-  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document,private accountService:AccountsService) { }
+  constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document,private accountService:AccountsService,private usersService:UsersService ) { }
+  //activeUsers = [];
+  //inactiveUsers = [];
 
   ngOnInit(): void {
-    this.accounts= this.accountService.accounts;
+    //this.accounts= this.accountService.accounts;
+    // this.activeUsers= this.usersService.activeUsers;
+    // this.inactiveUsers= this.usersService.inactiveUsers;
    }
   title = 'Account';
   numberElement=[];
@@ -31,18 +36,8 @@ export class AppComponent implements OnInit {
   oddNumbers=[1,3,5];
   evenNumbers=[2,4];
   value=1;
-  activeUsers = ['Max', 'Anna'];
-  inactiveUsers = ['Chris', 'Manu'];
-
-  onSetToInactive(id: number) {
-    this.inactiveUsers.push(this.activeUsers[id]);
-    this.activeUsers.splice(id, 1);
-  }
-
-  onSetToActive(id: number) {
-    this.activeUsers.push(this.inactiveUsers[id]);
-    this.inactiveUsers.splice(id, 1);
-  }
+  
+  
 
   
  
