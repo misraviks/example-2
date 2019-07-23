@@ -10,6 +10,11 @@ import { BetterdirectiveDirective } from './better-directive/betterdirective.dir
 import { UnlessDirective } from './unless-directive/unless.directive';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
+import { AccountsService } from './accountService.service';
+import { LoggingService } from './logging.service';
+import { DropDownDirective } from './dropdown.directive';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
 
 
 @NgModule({
@@ -22,12 +27,15 @@ import { NewAccountComponent } from './new-account/new-account.component';
     BetterdirectiveDirective,
     UnlessDirective,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    DropDownDirective,
+    ActiveUsersComponent,
+    InactiveUsersComponent    
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [AccountsService,LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
